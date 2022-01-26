@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import MovieCard from './MovieCard.jsx';
 
 
 const SearchBar = props => {
@@ -14,7 +14,7 @@ const SearchBar = props => {
     try{
       const res = await fetch(apiUrl);
       const data = await res.json();
-      console.log(data.results);
+      //console.log(data.results);
       setMovies(data.results);
       }catch(err){
         console.error(err);
@@ -39,19 +39,7 @@ const SearchBar = props => {
     </form>
     <div className="movie-list">
         {movies.map(movie=>
-          <div className="moviecard" key={movie.id}>
-            <img className="movieimage"
-            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-            alt={movie.title + ' picture'}
-            width="300px"
-            height="300px"
-            />
-            <div className="moviedetails">
-              <h3 className="movietitle">{movie.original_title}</h3>
-              <p className="releasedate">RELEASE DATE: {movie.release_date}</p>
-              <p className="synopsis">Description: {movie.overview}</p>
-            </div>
-          </div>)}
+          <MovieCard movie={movie} key={movie.id}/>)}
     </div>
     </>
     )
