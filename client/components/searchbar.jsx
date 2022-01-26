@@ -37,6 +37,7 @@ const SearchBar = props => {
     // }
 
     return (
+    <>
     <form className="form" onSubmit={searchMovies}>
       <label htmlFor="query">
         <span className="placeholder">Search for Movies!</span>
@@ -51,6 +52,18 @@ const SearchBar = props => {
       />
       <button className="button" type="submit">Search</button>
     </form>
+    <div className="movie-list">
+        {movies.map(movie=>
+          <div className="moviecard" key={movie.id}>
+            <img className="movieimage"
+            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+            alt={movie.title + ' picture'}
+            width="300px"
+            height="300px"
+            />
+          </div>)}
+    </div>
+    </>
     )
   };
 
