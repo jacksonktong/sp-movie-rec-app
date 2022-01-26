@@ -2,7 +2,8 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const PORT = 3000;
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const movieController = require("./controllers/movieController");
 const uri = 'mongodb+srv://jtong:codesmith@cluster0.ykxgo.mongodb.net/movierecapp?retryWrites=true&w=majority'
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -13,7 +14,9 @@ mongoose.connection.once('open', ()=>{
 app.use(express.json());
 
 //client add to favorite, send post request to save movie into database
-//app.post()
+app.post('/', movieController.addFav, (req, res) => {
+  res.status(200).json(res.locals.favorite);
+})
 
 //error for unknown route
 app.use((req, res) => res.sendStatus(404));
