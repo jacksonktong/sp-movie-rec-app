@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import axios from "axios";
-
 
 
 
@@ -22,19 +20,6 @@ const SearchBar = props => {
         console.error(err);
       }
     };
-    // const searchInputHandler = (e) => {
-    //   setSearchVal(e.target.value);
-    // };
-
-    // const resetInputHandler = () => {
-    //   setSearchVal("");
-    // };
-
-    // const searchHandler = (e) => {
-    //   e.preventDefault();
-    //   props.search(searchVal);
-    //   resetInputHandler();
-    // }
 
     return (
     <>
@@ -61,6 +46,11 @@ const SearchBar = props => {
             width="300px"
             height="300px"
             />
+            <div className="moviedetails">
+              <h3 className="movietitle">{movie.original_title}</h3>
+              <p className="releasedate">RELEASE DATE: {movie.release_date}</p>
+              <p className="synopsis">Description: {movie.overview}</p>
+            </div>
           </div>)}
     </div>
     </>
