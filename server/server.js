@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const bodyParser = require('body-parser');
 const PORT = 3000;
 const mongoose = require('mongoose');
 const movieController = require("./controllers/movieController");
@@ -12,10 +13,11 @@ mongoose.connection.once('open', ()=>{
 });
 
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //client add to favorite, send post request to save movie into database
-app.post('/', movieController.addFav, (req, res) => {
-  res.status(200).json(res.locals.favorite);
+app.post('/api', movieController.addFav, (req, res) => {
+  console.log('Received request', res.locals.favorites);
 })
 
 //error for unknown route

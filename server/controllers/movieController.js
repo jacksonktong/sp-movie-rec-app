@@ -3,8 +3,9 @@ const MovieList = require('../models/movieListModel');
 const movieController = {};
 
 movieController.addFav = (req, res, next) => {
-  console.log('log body', req.body);
-  // MovieList.create({title: "placeholder"},
+  console.log('add fav middleware', req.body);
+  const {title, releasedate} = req.body;
+  // MovieList.create({title: title, releasedate: releasedate},
   //   (err, data) => {
   //     if(err) {
   //       return next(
@@ -12,6 +13,7 @@ movieController.addFav = (req, res, next) => {
   //       );
   //     }
   //     //save data to persist
+  //     res.locals.favorites = req.body;
   //     return next();
   //   }
   // );

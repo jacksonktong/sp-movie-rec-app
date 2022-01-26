@@ -23,9 +23,26 @@ const SearchBar = props => {
     };
 
     const addFavorite = (value) => {
-      const newList = [...favorites, value];
-      console.log(newList);
-      setFavorite(newList);
+      const newVal = {
+        title: value.original_title,
+        releasedate: value.release_date
+      }
+      // console.log(newVal);
+      // setFavorite(value);
+      fetch('/api/', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newVal),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success', data);
+      })
+      .catch((error) => {
+        console.error('Error', error);
+      })
     }
 
     return (
