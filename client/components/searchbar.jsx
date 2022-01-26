@@ -5,6 +5,7 @@ import MovieCard from './MovieCard.jsx';
 const SearchBar = props => {
   const [searchVal, setSearchVal] = useState("");
   const [movies, setMovies] = useState([]);
+  const [favorites, setFavorite] = useState([]);
   
   const searchMovies = async (e) => {
     e.preventDefault();
@@ -20,6 +21,12 @@ const SearchBar = props => {
         console.error(err);
       }
     };
+
+    const addFavorite = (value) => {
+      const newList = [...favorites, value];
+      console.log(newList);
+      setFavorite(newList);
+    }
 
     return (
     <>
@@ -39,7 +46,7 @@ const SearchBar = props => {
     </form>
     <div className="movie-list">
         {movies.map(movie=>
-          <MovieCard movie={movie} key={movie.id}/>)}
+          <MovieCard movie={movie} key={movie.id} handleFavorite={addFavorite}/>)}
     </div>
     </>
     )

@@ -2,6 +2,7 @@ import React from 'react'
 
 const MovieCard = props => {
   const movie = props.movie;
+  const favorite = props.favorite;
   return (
     <div className="moviecard">
           <img className="movieimage"
@@ -14,7 +15,7 @@ const MovieCard = props => {
             <h3 className="movietitle">{movie.original_title}</h3>
             <p className="releasedate">RELEASE DATE: {movie.release_date}</p>
             <p className="synopsis">Description: {movie.overview}</p>
-            <button className="favbutton">Add to favorites!</button>
+            <button className="favbutton" onClick={() => props.handleFavorite(movie)}>Add to favorites!</button>
           </div>
         </div>
   )
