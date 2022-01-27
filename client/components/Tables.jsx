@@ -3,9 +3,12 @@ import React from 'react';
 const Table = props =>{
   return (
   <div>
-    <h3>Hello</h3>
-    {props.title}
-    {props.releasedate}
+    <span>
+      {props.title}
+    </span>
+    <span>
+      {props.date}
+    </span>
   </div>
   )
 }
