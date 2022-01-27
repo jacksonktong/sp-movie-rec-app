@@ -8,11 +8,11 @@ const App = () => {
   <div id="mainpage">
     <Router>
       <nav>
-        <Link to="/favorites">Favorites</Link>
+        <Link to="/api/favorites">Favorites</Link>
       </nav>
       <Routes>
         <Route path="/" element={<MainContainer/>} />
-        <Route path="/favorites" element={<FavoriteMovies/>} />
+        <Route path="/api/favorites" element={<FavoriteMovies/>} />
       </Routes>
     </Router>
   </div>

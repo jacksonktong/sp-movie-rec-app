@@ -18,6 +18,16 @@ movieController.addFav = (req, res, next) => {
     }
   );
   return next();
+};
+
+movieController.grabFav = (req, res, next) => {
+  MovieList.find({}, (err, data)=>{
+    if(err){
+      return next({log: 'Error in grabbing favorites'}, err);
+    }
+    res.locals.favmovies = data
+    return next();
+  });
 }
 
 module.exports = movieController;
