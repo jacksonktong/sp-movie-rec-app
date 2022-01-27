@@ -20,25 +20,21 @@ const MovieCard = props => {
   )
 }
 const imgobj = {
-  width: "259px",
+  width: "260px",
   height: "320px",
-  // position: "relative",
-  // display: "inline-block",
-  // overflow: "hidden",
-  // marginRight: "auto",
-  // marginLeft: "auto",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
 };
 
 const test = {
-  backgroundColor: "purple",
+  backgroundColor: "#9a80a5",
   margin: "10px 10px 10px 10px",
   position: "relative",
-  // display: "flex",
-  // justifyContent: "center",
-  // alignItems: "center",
-}
+  border: "2px",
+  boxShadow: "10px 10px 7px rgb(25 25 32 / 87%)"
+};
+
+
 
 export default MovieCard;

@@ -1,6 +1,6 @@
 body {
   
-  background-color: rgba(3, 56, 230, 0.836)
+  background-color: rgba(16, 38, 110, 0.836)
 };
 
 #mainpage {
@@ -9,13 +9,15 @@ body {
 
 #movielist {
   display: grid;
-  background-color: red;
-  grid-template-columns: repeat(4,280px);
+  background-color: rgb(119, 135, 170);
+  grid-template-columns: repeat(5,280px);
   justify-self: center;
+  justify-content: center;
+  
 };
 
 .moviepicture {
-  background-color: rgb(21, 255, 0);
+  background-color: rgb(40, 71, 37);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,4 +33,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+ 
 }

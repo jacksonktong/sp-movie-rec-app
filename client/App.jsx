@@ -16,11 +16,11 @@ const App = () => {
   return (
   <div id="mainpage">
     <Router>
-      <nav>
+      <nav className="rightnav">
       <p>
-      <Link to="/">Home</Link>
+      <Link to="/"><button type="button" className="homebutton">Home</button></Link>
       </p>
-      <Link to="/api/favorites">Favorites</Link>
+      <Link to="/api/favorites"><button type="button" className="favmoviebutton">Favorites</button></Link>
       </nav>
       <Routes>
         <Route path="/" element={<MainContainer/>} />
