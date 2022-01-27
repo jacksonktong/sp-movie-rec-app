@@ -8,8 +8,7 @@ const MovieCard = props => {
           <img className="movieimage"
           src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
           alt={movie.title + ' picture'}
-          width="300px"
-          height="300px"
+          style={imgobj}
           />
           <div className="moviedetails">
             <h3 className="movietitle">{movie.original_title}</h3>
@@ -20,10 +19,26 @@ const MovieCard = props => {
         </div>
   )
 }
+const imgobj = {
+  width: "259px",
+  height: "320px",
+  // position: "relative",
+  // display: "inline-block",
+  // overflow: "hidden",
+  // marginRight: "auto",
+  // marginLeft: "auto",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
 
 const test = {
   backgroundColor: "purple",
-  margin: "10px 10px 10px 10px"
+  margin: "10px 10px 10px 10px",
+  position: "relative",
+  // display: "flex",
+  // justifyContent: "center",
+  // alignItems: "center",
 }
 
 export default MovieCard;
