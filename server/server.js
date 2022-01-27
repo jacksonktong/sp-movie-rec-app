@@ -20,9 +20,9 @@ app.post('/api', movieController.addFav, (req, res) => {
   return console.log('Received request', res.locals.favorites);
 })
 //get request to favorites page
-app.get('/favorites', (req, res) =>{
-  return res.sendFile(path.resolve(__dirname, '/favorites.html'));
-})
+// app.get('/favorites', (req, res) =>{
+//   return console.log('in favorites page');
+// })
 
 //error for unknown route
 app.use((req, res) => res.sendStatus(404));

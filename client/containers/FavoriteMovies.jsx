@@ -3,7 +3,7 @@ import React from 'react';
 const FavoriteMovies = props => {
   return (
   <div className="favoriteMovies">
-    <h1 id="head">My Movie List</h1>
+    <h1 id="head">Favorited Movies</h1>
   </div>
   )
 };

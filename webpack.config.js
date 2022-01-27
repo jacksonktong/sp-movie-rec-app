@@ -40,7 +40,7 @@ module.exports = {
     hot: true,
     proxy: {
       '/api': 'http://localhost:3000',
-      '/favorites': 'http://localhost:3000/favorites'
+      '/api/favorites': 'http://localhost:3000/favorites'
     }
   },
   plugins: [

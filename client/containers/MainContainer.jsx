@@ -6,7 +6,7 @@ const MainContainer = props => {
   return (
   <div className="container">
     <h1 id="header">My Movie List</h1>
-    <FavBar/>
+    {/* <FavBar/> */}
     <SearchBar/>
   </div>
   )

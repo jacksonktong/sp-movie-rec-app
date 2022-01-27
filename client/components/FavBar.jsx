@@ -4,7 +4,7 @@ const FavBar = props => {
 
 return (
   <div>
-    <a href ="https://localhost:8080/favorites">
+    <a href ="http://localhost:8080/favorites">
     <input type="button" 
     className="redirectbutton" 
     id="favorites"
