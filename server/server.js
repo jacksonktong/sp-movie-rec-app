@@ -17,7 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //client add to favorite, send post request to save movie into database
 app.post('/api', movieController.addFav, (req, res) => {
-  return console.log('Received request', res.locals.favorites);
+  res.sendStatus(200);
+  return console.log('Favorited Request!');
 })
 //get request to favorites page
 // app.get('/favorites', (req, res) =>{

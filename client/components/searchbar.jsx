@@ -29,7 +29,7 @@ const SearchBar = props => {
       }
       // console.log(newVal);
       // setFavorite(value);
-      fetch('/api/', {
+      fetch('/api', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
