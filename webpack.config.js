@@ -39,7 +39,8 @@ module.exports = {
     port: 8080,
     hot: true,
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': 'http://localhost:3000',
+      '/favorites': 'http://localhost:3000/favorites'
     }
   },
   plugins: [

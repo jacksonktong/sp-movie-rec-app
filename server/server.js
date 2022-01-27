@@ -17,7 +17,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //client add to favorite, send post request to save movie into database
 app.post('/api', movieController.addFav, (req, res) => {
-  console.log('Received request', res.locals.favorites);
+  return console.log('Received request', res.locals.favorites);
+})
+//get request to favorites page
+app.get('/favorites', (req, res) =>{
+  return res.sendFile(path.resolve(__dirname, '/favorites.html'));
 })
 
 //error for unknown route

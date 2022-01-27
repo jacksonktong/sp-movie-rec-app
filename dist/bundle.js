@@ -20,6 +20,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./client/components/FavBar.jsx":
+/*!**************************************!*\
+  !*** ./client/components/FavBar.jsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar FavBar = function FavBar(props) {\n  //create onclick handler to make a get request to redirect to a differnt page\n  var favPageHandler = function favPageHandler() {\n    fetch('/favorites').then(function (response) {\n      return response.json();\n    }).then(function (data) {\n      return console.log(data);\n    })[\"catch\"](function (error) {\n      return console.error('Error in fetch', error);\n    });\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", {\n    type: \"button\",\n    className: \"redirectbutton\",\n    id: \"favorites\",\n    value: \"My Favorites\",\n    onClick: favPageHandler\n  }));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FavBar);\n\n//# sourceURL=webpack://solo-project/./client/components/FavBar.jsx?");
+
+/***/ }),
+
 /***/ "./client/components/MovieCard.jsx":
 /*!*****************************************!*\
   !*** ./client/components/MovieCard.jsx ***!
@@ -49,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_searchbar_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/searchbar.jsx */ \"./client/components/searchbar.jsx\");\n\n\n\nvar MainContainer = function MainContainer(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h1\", {\n    id: \"header\"\n  }, \"My Movie List\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_searchbar_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MainContainer);\n\n//# sourceURL=webpack://solo-project/./client/containers/MainContainer.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_searchbar_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/searchbar.jsx */ \"./client/components/searchbar.jsx\");\n/* harmony import */ var _components_FavBar_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/FavBar.jsx */ \"./client/components/FavBar.jsx\");\n\n\n\n\nvar MainContainer = function MainContainer(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h1\", {\n    id: \"header\"\n  }, \"My Movie List\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_FavBar_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_searchbar_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MainContainer);\n\n//# sourceURL=webpack://solo-project/./client/containers/MainContainer.jsx?");
 
 /***/ }),
 
