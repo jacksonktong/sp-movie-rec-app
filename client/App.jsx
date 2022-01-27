@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import MainContainer from './containers/MainContainer.jsx';
 import FavoriteMovies from './containers/FavoriteMovies.jsx';
+import './stylesheets/styles.css';
 
 // const grabFavMovies = () =>{
 //   fetch('/api/favorites')
@@ -16,7 +17,10 @@ const App = () => {
   <div id="mainpage">
     <Router>
       <nav>
-        <Link to="/api/favorites">Favorites</Link>
+      <p>
+      <Link to="/">Home</Link>
+      </p>
+      <Link to="/api/favorites">Favorites</Link>
       </nav>
       <Routes>
         <Route path="/" element={<MainContainer/>} />
