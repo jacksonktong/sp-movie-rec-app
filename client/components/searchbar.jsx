@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import MovieCard from './MovieCard.jsx';
 
-
 const SearchBar = props => {
   const [searchVal, setSearchVal] = useState("");
   const [movies, setMovies] = useState([]);
@@ -61,7 +60,7 @@ const SearchBar = props => {
       />
       <button className="button" type="submit">Search</button>
     </form>
-    <div className="movie-list">
+    <div id="movielist">
         {movies.map(movie=>
           <MovieCard movie={movie} key={movie.id} handleFavorite={addFavorite}/>)}
     </div>

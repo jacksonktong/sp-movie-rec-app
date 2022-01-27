@@ -1,3 +1,34 @@
 body {
-  background-color: rgb(3, 82, 230)
+  
+  background-color: rgba(3, 56, 230, 0.836)
 };
+
+#mainpage {
+  background-color: pink;
+}
+
+#movielist {
+  display: grid;
+  background-color: red;
+  grid-template-columns: repeat(4,280px);
+  justify-self: center;
+};
+
+.moviepicture {
+  background-color: rgb(21, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

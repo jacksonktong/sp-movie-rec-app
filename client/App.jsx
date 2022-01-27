@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import MainContainer from './containers/MainContainer.jsx';
 import FavoriteMovies from './containers/FavoriteMovies.jsx';
-import './stylesheets/styles.css';
+// import css from './stylesheets/styles.css';
 
 // const grabFavMovies = () =>{
 //   fetch('/api/favorites')

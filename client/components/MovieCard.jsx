@@ -4,7 +4,7 @@ const MovieCard = props => {
   const movie = props.movie;
   const favorite = props.favorite;
   return (
-    <div className="moviecard">
+    <div className="moviepicture" style={test}>
           <img className="movieimage"
           src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
           alt={movie.title + ' picture'}
@@ -19,6 +19,11 @@ const MovieCard = props => {
           </div>
         </div>
   )
+}
+
+const test = {
+  backgroundColor: "purple",
+  margin: "10px 10px 10px 10px"
 }
 
 export default MovieCard;
