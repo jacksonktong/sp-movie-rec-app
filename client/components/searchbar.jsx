@@ -4,7 +4,6 @@ import MovieCard from './MovieCard.jsx';
 const SearchBar = props => {
   const [searchVal, setSearchVal] = useState("");
   const [movies, setMovies] = useState([]);
-  const [favorites, setFavorite] = useState([]);
   
   const searchMovies = async (e) => {
     e.preventDefault();
@@ -48,17 +47,18 @@ const SearchBar = props => {
     <>
     <form className="form" onSubmit={searchMovies}>
       <label htmlFor="query">
-        <span className="placeholder">Search for Movies!</span>
+        {/* <span className="placeholder">Search for Movies!</span> */}
       </label>
       <input 
         className="input"
         type="text"
         id="movie-search"
-        placeholder="Movies"
+        placeholder="Search for movies..."
         value={searchVal}
+        size="50"
         onChange={(e) => setSearchVal(e.target.value)}
       />
-      <button className="button" type="submit">Search</button>
+      <button className="searchbutton" type="submit">Search</button>
     </form>
     <div id="movielist">
         {movies.map(movie=>

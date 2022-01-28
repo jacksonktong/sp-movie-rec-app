@@ -64,3 +64,17 @@ th {
   border: 5px solid #5a4087;
   border-style: outset;
 }
+
+.searchbutton {
+  background-color: #09254b;
+  color: #fff;
+}
+
+.homebutton, .favmoviebutton {
+  width: 100px;
+  background-color: rgb(60, 62, 68);
+  color: #c6cc79;
+  border-style: 5px;
+  padding: 4px;
+
+}
