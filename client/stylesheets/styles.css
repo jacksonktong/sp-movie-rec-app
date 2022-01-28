@@ -1,6 +1,8 @@
 body {
   font-family: sans-serif;
-  background-color: rgba(16, 38, 110, 0.836)
+  background-color: rgba(16, 38, 110, 0.836);
+  /* background-color: rgba(45, 53, 68, 0.836); */
+  background-image: linear-gradient(to right, rgba(45, 53, 68, 0.836) , rgba(67, 90, 165, 0.836));
 };
 
 #mainpage {
@@ -61,7 +63,7 @@ td {
 }
 
 th {
-  border: 5px solid #5a4087;
+  border: 5px solid #3d2e57;
   border-style: outset;
 }
 
@@ -76,5 +78,4 @@ th {
   color: #c6cc79;
   border-style: 5px;
   padding: 4px;
-
 }
