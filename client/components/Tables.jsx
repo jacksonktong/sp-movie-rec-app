@@ -2,14 +2,14 @@ import React from 'react';
 
 const Table = props =>{
   return (
-  <div>
-    <span>
+  <tr>
+    <td>
       {props.title}
-    </span>
-    <span>
+    </td>
+    <td>
       {props.date}
-    </span>
-  </div>
+    </td>
+  </tr>
   )
 }
 

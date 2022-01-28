@@ -1,5 +1,5 @@
 body {
-  
+  font-family: sans-serif;
   background-color: rgba(16, 38, 110, 0.836)
 };
 
@@ -40,5 +40,27 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
   align-items: end;
- 
+}
+
+#head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favtable {
+  border: 1px solid black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  border: 3px solid rgb(18 15 22);
+  border-style: groove;
+}
+
+th {
+  border: 5px solid #5a4087;
+  border-style: outset;
 }

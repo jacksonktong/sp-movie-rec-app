@@ -22,7 +22,7 @@ const FavoriteMovies = props => {
   return (
   <div className="favoriteMovies">
     <h1 id="head">Favorited Movies</h1>
-    <table>
+    <table class="favtable">
       <thead>
         <tr>
           <th>Movie Title</th>
@@ -30,11 +30,7 @@ const FavoriteMovies = props => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            {value}
-          </td>
-        </tr>
+        {value}
       </tbody>
     </table>
   </div>
