@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 const PORT = 3000;
 const mongoose = require('mongoose');
 const movieController = require("./controllers/movieController");
-const uri = 'mongodb+srv://jtong:codesmith@cluster0.ykxgo.mongodb.net/movierecapp?retryWrites=true&w=majority'
+require('dotenv').config();
+const uri = process.env.DB_CONNECTION
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', ()=>{
